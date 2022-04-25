@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 //bat 'node --version'
+                bat 'echo "hej"; exit 1'
                 bat 'node app.js'
             }
         }
