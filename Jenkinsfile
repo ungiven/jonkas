@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                //bat 'node --version'
+                bat 'node app.js'
+            }
+        }
+        stage('test') {
+            steps {
+                bat 'echo "testing"; exit 1'
             }
         }
     }
